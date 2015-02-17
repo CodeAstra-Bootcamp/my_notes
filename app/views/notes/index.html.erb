@@ -1,6 +1,7 @@
 <h1>My Notes</h1>
 <%= simple_form_for @new_note, html: {id: "note_form"}, remote: true do |f| %>
   <%= f.input :title, label: false, placeholder: "Enter a Note" %>
+  <%= f.input :user_id, as: :hidden %>
   <%= f.submit "Add Note" %>
 <% end %>
 
